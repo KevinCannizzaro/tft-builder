@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @GetMapping("/")
-    public String Hello() {
+    public String hello() {
         return "Bienvenue sur TFT Team Builder by Kévin";
     }
 }
