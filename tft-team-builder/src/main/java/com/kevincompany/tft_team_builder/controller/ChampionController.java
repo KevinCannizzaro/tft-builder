@@ -2,6 +2,7 @@ package com.kevincompany.tft_team_builder.controller;
 
 import com.kevincompany.tft_team_builder.model.Champion;
 import com.kevincompany.tft_team_builder.service.ChampionService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,12 +28,12 @@ public class ChampionController {
     }
 
     @PostMapping
-    public ResponseEntity<Champion> addChampion(@RequestBody Champion champion) {
+    public ResponseEntity<Champion> addChampion(@Valid @RequestBody Champion champion) {
         return new ResponseEntity<>(championService.addChampion(champion), HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Champion> updateChampion(@PathVariable Long id, @RequestBody Champion champion) {
+    public ResponseEntity<Champion> updateChampion(@PathVariable Long id, @Valid @RequestBody Champion champion) {
         return ResponseEntity.ok(championService.updateChampion(id, champion));
     }
 
