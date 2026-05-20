@@ -1,0 +1,62 @@
+# ============
+# Build & Compiled Files (Maven/Java)
+# ============
+target/
+/out/
+*.class
+*.jar
+*.war
+*.ear
+.mvn/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# ============
+# IDE: VS Code
+# ============
+.vscode/
+*.code-workspace
+
+# ============
+# IDE: IntelliJ (au cas où tu reviennes dessus)
+# ============
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# ============
+# Sensitive Files (Database, Configs)
+# ============
+# Ignore TOUS les fichiers de config sensibles
+*.properties
+*.yml
+*.yaml
+*.env
+*.db
+*.sql
+!*.properties.example  # On garde les exemples
+!*.yml.example
+!*.yaml.example
+
+# Ignore les fichiers spécifiques de config
+src/main/resources/application.properties
+src/main/resources/application.yml
+
+# Ignore les dossiers de config
+config/
+
+# ============
+# OS & Temp Files
+# ============
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+*.bak
+
+# ============
+# Logs
+# ============
+*.log
